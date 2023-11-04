@@ -1806,4 +1806,333 @@ export const GlobalStyles = StyleSheet.create({
   text_pink_900: {
     color: "#831843",
   },
+
+  // Handle general colors
+  white: {
+    color: "#fff",
+  },
+
+  black: {
+    color: "#000",
+  },
+
+  gray_50: {
+    color: "#F9FAFB",
+  },
+
+  gray_100: {
+    color: "#F3F4F6",
+  },
+
+  gray_200: {
+    color: "#E5E7EB",
+  },
+
+  gray_300: {
+    color: "#D1D5DB",
+  },
+
+  gray_400: {
+    color: "#9CA3AF",
+  },
+
+  gray_500: {
+    color: "#6B7280",
+  },
+
+  gray_600: {
+    color: "#4B5563",
+  },
+
+  gray_700: {
+    color: "#374151",
+  },
+
+  gray_800: {
+    color: "#1F2937",
+  },
+
+  gray_900: {
+    color: "#111827",
+  },
+
+  red_50: {
+    color: "#FEF2F2",
+  },
+
+  red_100: {
+    color: "#FEE2E2",
+  },
+
+  red_200: {
+    color: "#FECACA",
+  },
+
+  red_300: {
+    color: "#FCA5A5",
+  },
+
+  red_400: {
+    color: "#F87171",
+  },
+
+  red_500: {
+    color: "#EF4444",
+  },
+
+  red_600: {
+    color: "#DC2626",
+  },
+
+  red_700: {
+    color: "#B91C1C",
+  },
+
+  red_800: {
+    color: "#991B1B",
+  },
+
+  red_900: {
+    color: "#7F1D1D",
+  },
+
+  yellow_50: {
+    color: "#FFFBEB",
+  },
+
+  yellow_100: {
+    color: "#FEF3C7",
+  },
+
+  yellow_200: {
+    color: "#FDE68A",
+  },
+
+  yellow_300: {
+    color: "#FCD34D",
+  },
+
+  yellow_400: {
+    color: "#FBBF24",
+  },
+
+  yellow_500: {
+    color: "#F59E0B",
+  },
+
+  yellow_600: {
+    color: "#D97706",
+  },
+
+  yellow_700: {
+    color: "#B45309",
+  },
+
+  yellow_800: {
+    color: "#92400E",
+  },
+
+  yellow_900: {
+    color: "#78350F",
+  },
+
+  green_50: {
+    color: "#ECFDF5",
+  },
+
+  green_100: {
+    color: "#D1FAE5",
+  },
+
+  green_200: {
+    color: "#A7F3D0",
+  },
+
+  green_300: {
+    color: "#6EE7B7",
+  },
+
+  green_400: {
+    color: "#34D399",
+  },
+
+  green_500: {
+    color: "#10B981",
+  },
+
+  green_600: {
+    color: "#059669",
+  },
+
+  green_700: {
+    color: "#047857",
+  },
+
+  green_800: {
+    color: "#065F46",
+  },
+
+  green_900: {
+    color: "#064E3B",
+  },
+
+  blue_50: {
+    color: "#EFF6FF",
+  },
+
+  blue_100: {
+    color: "#DBEAFE",
+  },
+
+  blue_200: {
+    color: "#BFDBFE",
+  },
+
+  blue_300: {
+    color: "#93C5FD",
+  },
+
+  blue_400: {
+    color: "#60A5FA",
+  },
+
+  blue_500: {
+    color: "#3B82F6",
+  },
+
+  blue_600: {
+    color: "#2563EB",
+  },
+
+  blue_700: {
+    color: "#1D4ED8",
+  },
+
+  blue_800: {
+    color: "#1E40AF",
+  },
+
+  blue_900: {
+    color: "#1E3A8A",
+  },
+
+  indigo_50: {
+    color: "#EEF2FF",
+  },
+
+  indigo_100: {
+    color: "#E0E7FF",
+  },
+
+  indigo_200: {
+    color: "#C7D2FE",
+  },
+
+  indigo_300: {
+    color: "#A5B4FC",
+  },
+
+  indigo_400: {
+    color: "#818CF8",
+  },
+
+  indigo_500: {
+    color: "#6366F1",
+  },
+
+  indigo_600: {
+    color: "#4F46E5",
+  },
+
+  indigo_700: {
+    color: "#4338CA",
+  },
+
+  indigo_800: {
+    color: "#3730A3",
+  },
+
+  indigo_900: {
+    color: "#312E81",
+  },
+
+  purple_50: {
+    color: "#F5F3FF",
+  },
+
+  purple_100: {
+    color: "#EDE9FE",
+  },
+
+  purple_200: {
+    color: "#DDD6FE",
+  },
+
+  purple_300: {
+    color: "#C4B5FD",
+  },
+
+  purple_400: {
+    color: "#A78BFA",
+  },
+
+  purple_500: {
+    color: "#8B5CF6",
+  },
+
+  purple_600: {
+    color: "#7C3AED",
+  },
+
+  purple_700: {
+    color: "#6D28D9",
+  },
+
+  purple_800: {
+    color: "#5B21B6",
+  },
+
+  purple_900: {
+    color: "#4C1D95",
+  },
+
+  pink_50: {
+    color: "#FDF2F8",
+  },
+
+  pink_100: {
+    color: "#FCE7F3",
+  },
+
+  pink_200: {
+    color: "#FBCFE8",
+  },
+
+  pink_300: {
+    color: "#F9A8D4",
+  },
+
+  pink_400: {
+    color: "#F472B6",
+  },
+
+  pink_500: {
+    color: "#EC4899",
+  },
+
+  pink_600: {
+    color: "#DB2777",
+  },
+
+  pink_700: {
+    color: "#BE185D",
+  },
+
+  pink_800: {
+    color: "#9D174D",
+  },
+
+  pink_900: {
+    color: "#831843",
+  },
 });

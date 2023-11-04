@@ -5,20 +5,84 @@ import RecentExpenses from "./screens/RecentExpenses/RecentExpenses";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faClock, faList, faPen } from "@fortawesome/free-solid-svg-icons";
+import FaButton from "./components/UI/faButton/faButton";
+import { GlobalStyles } from "./constants/Styles/GlobalStyles/GlobalStyles";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
 
+function ExpensesOverview({ navigation }: any) {
+  return (
+    <BottomTabs.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: GlobalStyles.green_500.color,
+        },
+        headerTintColor: GlobalStyles.white.color,
+        headerTitleStyle: {
+          fontWeight: GlobalStyles.text_bold.fontWeight,
+        },
+      }}
+    >
+      <BottomTabs.Screen
+        name="Recent Expenses"
+        component={RecentExpenses}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesomeIcon icon={faClock} color={color} size={size} />
+          ),
+          headerRight: () => (
+            <FaButton
+              icon={faPen}
+              onPress={() => navigation.navigate("Manage Expenses")}
+              style={[GlobalStyles.mr_4, GlobalStyles.mt_4]}
+            />
+          ),
+        }}
+      />
+      <BottomTabs.Screen
+        name="All Expenses"
+        component={AllExpenses}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesomeIcon icon={faList} color={color} size={size} />
+          ),
+          headerRight: () => (
+            <FaButton
+              icon={faPen}
+              onPress={() => navigation.navigate("Manage Expenses")}
+              style={[GlobalStyles.mr_4, GlobalStyles.mt_4]}
+            />
+          ),
+        }}
+      />
+    </BottomTabs.Navigator>
+  );
+}
+
 export default function App() {
   return (
     <>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <NavigationContainer>
-        <BottomTabs.Navigator>
-          <BottomTabs.Screen name="RecentExpenses" component={RecentExpenses} />
-          <BottomTabs.Screen name="AllExpenses" component={AllExpenses} />
-          <BottomTabs.Screen name="ManageExpense" component={ManageExpense} />
-        </BottomTabs.Navigator>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Expenses"
+            component={ExpensesOverview}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="Manage Expenses"
+            component={ManageExpense}
+            options={{
+              presentation: "modal",
+            }}
+          />
+        </Stack.Navigator>
       </NavigationContainer>
     </>
   );
