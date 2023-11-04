@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import AllExpenses from "./screens/AllExpenses/AllExpenses";
+import ManageExpense from "./screens/ManageExpenses/ManageExpenses";
+import RecentExpenses from "./screens/RecentExpenses/RecentExpenses";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+const Stack = createNativeStackNavigator();
+const BottomTabs = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar style="light" />
+      <NavigationContainer>
+        <BottomTabs.Navigator>
+          <BottomTabs.Screen name="RecentExpenses" component={RecentExpenses} />
+          <BottomTabs.Screen name="AllExpenses" component={AllExpenses} />
+          <BottomTabs.Screen name="ManageExpense" component={ManageExpense} />
+        </BottomTabs.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
