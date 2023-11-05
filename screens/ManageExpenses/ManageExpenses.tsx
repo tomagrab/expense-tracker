@@ -1,7 +1,10 @@
 import { Text, View } from "react-native";
 import { GlobalStyles } from "../../constants/Styles/GlobalStyles/GlobalStyles";
+import { DUMMY_EXPENSES } from "../../Data/dumm-expense";
 
 export default function ManageExpense() {
+  const expenses = DUMMY_EXPENSES;
+
   return (
     <View
       style={[

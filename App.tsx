@@ -8,7 +8,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faClock, faList, faPen } from "@fortawesome/free-solid-svg-icons";
 import FaButton from "./components/UI/faButton/faButton";
-import { GlobalStyles } from "./constants/Styles/GlobalStyles/GlobalStyles";
+import {
+  GlobalStyles,
+  colorScheme,
+} from "./constants/Styles/GlobalStyles/GlobalStyles";
 
 const Stack = createNativeStackNavigator();
 const BottomTabs = createBottomTabNavigator();
@@ -18,12 +21,16 @@ function ExpensesOverview({ navigation }: any) {
     <BottomTabs.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: GlobalStyles.green_500.color,
+          backgroundColor: colorScheme.colors.primary500,
         },
         headerTintColor: GlobalStyles.white.color,
         headerTitleStyle: {
           fontWeight: GlobalStyles.text_bold.fontWeight,
         },
+        tabBarStyle: {
+          backgroundColor: colorScheme.colors.primary500,
+        },
+        tabBarActiveTintColor: GlobalStyles.white.color,
       }}
     >
       <BottomTabs.Screen
@@ -53,7 +60,6 @@ function ExpensesOverview({ navigation }: any) {
             <FaButton
               icon={faPen}
               onPress={() => navigation.navigate("Manage Expenses")}
-              style={[GlobalStyles.mr_4, GlobalStyles.mt_4]}
             />
           ),
         }}

@@ -1,7 +1,10 @@
 import { Text, View } from "react-native";
 import { GlobalStyles } from "../../constants/Styles/GlobalStyles/GlobalStyles";
+import ExpensesOutput from "../../components/ExpensesOutput/ExpensesOutput";
+import { DUMMY_EXPENSES } from "../../Data/dumm-expense";
 
 export default function RecentExpenses() {
+  const expenses = DUMMY_EXPENSES;
   return (
     <View
       style={[
@@ -10,9 +13,7 @@ export default function RecentExpenses() {
         GlobalStyles.bg_green_500,
       ]}
     >
-      <Text style={[GlobalStyles.text_base, GlobalStyles.text_white]}>
-        RecentExpenses Screen
-      </Text>
+      <ExpensesOutput period="Recent" expenses={expenses} />
     </View>
   );
 }
